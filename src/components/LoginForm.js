@@ -61,7 +61,7 @@ class LoginForm extends Component {
   // handleSubmit(event){
   //   event.preventDefault();
   //   let data = {userName: "user", password: "pass"};
-  //   fetch("https://portal-dev.zignsec.com/api/account/login", {
+  //   fetch("https://.........", {
   //     method: "POST",
   //     body: JSON.stringify(data),
   //     headers: { 'Content-Type': 'application/json' }
