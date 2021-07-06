@@ -1,0 +1,47 @@
+@import "../../App.scss";
+
+.resultPageContainer {
+  // padding: 2rem 4rem;
+  padding: 0 4rem 2rem 4rem;
+  // padding-top: 5vh;
+}
+
+.result {
+  display: flex;
+  border: 1.5px solid $primary-beige;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__boxes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__buttonContainer {
+    @include centerContent;
+    align-self: flex-end;
+    cursor: pointer;
+    margin: 1rem 0;
+  }
+
+  &__expandButton {
+    @include centerContent;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: $primary-blue;
+    font-size: 12px;
+  }
+}
+*:focus {
+  outline: 0 !important;
+}

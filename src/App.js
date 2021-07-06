@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+
+import Login from "./components/pages/Login";
+import Search from "./components/pages/Search";
+import Result from "./components/pages/Result";
+import NewSession from "./components/pages/NewSession";
+import NotFound from "./components/NotFound";
+import GetSessions from "./components/GetSessions";
+import PrivateRoute from "./utils/PrivateRoute";
+import PublicRoute from "./utils/PublicRoute";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Route exact path="/">
+          <Redirect to="/login" component={Login}></Redirect>
+        </Route>
+        <Route path="/get-sessions" component={GetSessions} />
+        <Switch>
+          <PublicRoute path="/login" component={Login} />
+          <PrivateRoute
+            path="/new-session"
+            component={NewSession}
+          ></PrivateRoute>
+          <PrivateRoute path="/search" component={Search}></PrivateRoute>
+          <PrivateRoute path="/result" component={Result}></PrivateRoute>
+          <Route component={NotFound} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 

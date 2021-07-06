@@ -1,0 +1,33 @@
+@import "../App.scss";
+
+.breadcrumb-container{
+    @include centerContent;
+    padding-top: 5vh;
+}
+
+.ZS-symbol{
+    width: auto;
+    height: 5vh;
+
+    &__logo{
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+.pageTitle{
+    width: 20%;
+    text-align: center; 
+    border-bottom: 1px solid $primary-orange; 
+    line-height: 0.1em;
+    // margin: 10px 0 20px; 
+    margin: 0 1vw 0 1vw;
+}
+
+h2 span{
+    background:#fff; 
+    color: $primary-orange;
+    // margin: 0 1vw 0 1vw;
+    padding:0 10px; 
+}

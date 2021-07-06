@@ -1,0 +1,226 @@
+@import "../App.scss";
+
+h1 {
+  @include h1;
+}
+
+.p-searchComponent{
+    margin: 0;
+    transform: translate(5%, 125%)
+}
+
+.searchOuterContainer{
+    @include pagePadding;
+}
+
+.searchContainer{
+    flex-direction: column;
+    @include contentBox;
+    @include centerContent;
+
+    &__title{
+      margin: 4rem 0 2rem 0;
+    }
+
+    &__sorting{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+.search-inputFields-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-inputFields {
+  display: flex;
+
+  &__firstname {
+    @include fieldStyle-small;
+    margin-bottom: 2vh;
+    margin-right: 3vh;
+  }
+
+  &__lastname {
+    @include fieldStyle-small;
+  }
+
+  &__date {
+    @include fieldStyle-small;
+    margin-bottom: 2vh !important;
+    margin-right: 3vh !important;
+    border: 1px solid #C39183 !important;
+    padding-left: 1vw !important;
+  }
+
+  &__dateLeft{
+    @include fieldStyle-small;
+    border: 1px solid #C39183 !important;
+    margin-bottom: 2vh !important;
+    padding-left: 1vw !important;
+  }
+
+  &__to{
+    margin: 1rem 0.8rem 0 0.8rem;
+  }
+
+  &__dateRight {
+    @include fieldStyle-small;
+    border: 1px solid #C39183 !important;
+    padding-left: 1vw !important;
+  }
+
+  &__adress {
+    @include fieldStyle-small;
+  }
+
+  &__phone {
+    @include fieldStyle-small;
+    margin-bottom: 2vh;
+    margin-right: 3vh;
+  }
+
+  &__email {
+    @include fieldStyle-small;
+  }
+
+  &__countryCode {
+    @include fieldStyle-small;
+    margin-bottom: 2vh;
+    margin-right: 3vh;
+  }
+
+  &__doctype{
+    @include fieldStyle-small;
+  }
+
+  &__sessionID{
+    @include fieldStyle-large;
+    width: 36.5vw;
+    padding-left: 1vw;
+    margin-bottom: 2vh;
+  }
+
+  &__providerFolderID{
+    @include fieldStyle-large;
+    width: 36.5vw;
+    padding-left: 1vw;
+    margin-bottom: 2vh;
+  }
+
+  &__documentNumber{
+    @include fieldStyle-large;
+    width: 36.5vw;
+    padding-left: 1vw;
+    margin-bottom: 2vh;
+  }
+
+  &__tag{
+    @include fieldStyle-large;
+    width: 36.5vw;
+    padding-left: 1vw;
+    margin-bottom: 2vh;
+  }
+}
+
+.first-box{
+  width: auto;
+}
+
+.second-box{
+  width: 36.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-box{
+  width: auto;
+}
+
+.search-filteredFields-container{
+  display: flex;
+  justify-content: center;
+}
+
+.searchButtons{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  &__search{
+    @include button;
+    width: 5vw;
+    height: 4vh;
+    margin-right: 5rem;
+  }
+
+  &__search:focus{
+    outline: none;
+  }
+
+  &__advancedSearch{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  &__advancedSearch:focus{
+    outline: none;
+  }
+}
+
+.advancedSearchContainer{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.MuiSvgIcon-root{
+  color: #01394E;
+}
+
+.MuiInput-underline:before, ::after{
+  content: none !important;
+}
+
+.MuiInputBase-root{
+  height: 100% !important;
+}
+
+.MuiCheckbox-root:hover{
+  background-color: transparent !important;
+}
+
+.gridSearchingContainer-column{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 2vw;
+  justify-content: center;
+}
+
+.gridSearchingContainer-rows{
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.p-searchComponentStatus{
+  margin: 0;
+  transform: translate(5%, 350%)
+}
+
+.p-searchComponentDate{
+  margin: 0;
+  transform: translate(5%, 450%)
+}
+
+.p-searchComponentResult{
+  margin: 0;
+  transform: translate(5%, 550%)
+}

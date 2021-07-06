@@ -1,0 +1,70 @@
+@import '../App.scss';
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.logo-loginForm{
+    height: 10vh;
+    width: 100%;
+
+    &__image{
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        padding-left: 5vh;
+        padding-top: 5vh;
+    }
+}
+
+.container-loginForm{
+    height: 80vh;
+    @include centerContent
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 25vh;
+
+    &__username{
+        @include fieldStyle-large;
+    }
+
+    &__password-container{
+        @include centerContent;
+        border: 1px solid #C39A83;
+        border-radius: 5px;
+    }
+
+    &__password{
+        @include fieldStyle-large;
+        width: 31.5vw;
+        border: 0px;
+    }
+
+    &__hidePassword{
+        height: 3vh;
+        max-width: 3vw;
+        padding-right: 2vw;
+    }
+
+    &__hidePasswordIcon{
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        opacity: 50%;
+        cursor: pointer;
+    }
+
+    &__submit{
+        @include button;
+    }
+
+    &__submit:focus{
+        outline: none;
+    }
+}

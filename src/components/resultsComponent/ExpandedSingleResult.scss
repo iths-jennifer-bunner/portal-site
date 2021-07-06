@@ -1,0 +1,56 @@
+@import "../../App.scss";
+
+.expandedSingleResultContainer {
+  padding: 0 1rem;
+}
+hr {
+  border: none !important;
+  height: 0.5px !important;
+  background-color: #01394e !important;
+}
+
+.expandedTopContainer {
+  @include centerContent;
+  justify-content: space-between;
+
+  &__button {
+    &--status {
+      font-weight: bold;
+      background-color: red;
+      color: white;
+      border-radius: 5px;
+      padding: 0.5rem 2.5rem;
+      background: linear-gradient(
+        180deg,
+        #eb5757 47.83%,
+        rgba(255, 255, 255, 0) 195.65%
+      );
+    }
+  }
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+    counter-reset: $primary-blue;
+  }
+}
+
+.expandedSecondContainer {
+  &__states {
+    @include centerContent;
+    justify-content: space-between;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.expandedImgContainer {
+  @include centerContent;
+
+  justify-content: space-between;
+  // flex-wrap: wrap;
+}
+.expandedFieldsContainer {
+  @include centerContent;
+  justify-content: space-between;
+  padding: 1rem 0;
+}

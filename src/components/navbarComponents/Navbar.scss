@@ -1,0 +1,100 @@
+@import "../../App.scss";
+
+.navbar {
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 2px solid $primary-orange;
+  background-color: white;
+  // padding: 0 4rem 0 4rem;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68px;
+    max-width: 2000px;
+  }
+
+  &__logo {
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    height: 4rem;
+    // width: 100%;
+  }
+
+  &__image {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 3rem;
+    list-style: none;
+    text-align: center;
+    width: 80vw;
+    justify-content: end;
+    // margin-right: 1rem;
+  }
+
+  &__item {
+    max-height: 68px;
+  }
+
+  &__links {
+    color: $primary-orange;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    // padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 18px;
+
+    &--Effects:hover {
+      border-bottom: 2px solid $primary-orange;
+      // font-weight: 610;
+      transition: 0.2s ease-out;
+    }
+  }
+
+  &__titleBorder {
+    border: 1.5px solid $primary-orange;
+    border-radius: 5px;
+    padding: 1rem;
+    color: $primary-orange;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__titleBorder:hover {
+    background-color: $primary-orange;
+    color: white;
+    transition: all 0.3s ease-out;
+    // animation-name: menuButton;
+    // animation-duration: 1s;
+  }
+}
+// @keyframes menuButton {
+//   from {
+//     background-color: white;
+//   }
+//   to {
+//     background-color: $primary-orange;
+//   }
+// }
+// .test {
+//   width: 100%;
+//   height: 1000rem;
+//   background-color: $primary-beige;
+// }

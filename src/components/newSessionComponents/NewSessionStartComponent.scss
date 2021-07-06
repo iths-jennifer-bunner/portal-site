@@ -1,0 +1,73 @@
+@import "../../App.scss";
+
+.newSessionPageContainer {
+  @include pagePadding;
+}
+.newSessionContainer {
+  @include contentBox;
+  @include centerContent;
+  flex-direction: column;
+  padding: 2rem 0;
+  width: 100%;
+
+  &__title {
+    font-weight: 800;
+    font-size: 18px;
+  }
+
+  &__uploadContainer {
+    border: 2px solid $primary-beige;
+    border-radius: 5px;
+    @include centerContent;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    margin: 2rem 5rem;
+    width: 70%;
+  }
+
+  &__uploadArgument,
+  &__addFile {
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  &__addFileBox {
+    width: 100%;
+  }
+  &__uploadArgument {
+    margin: 2rem 10rem;
+    padding: 5rem 0;
+  }
+
+  &__dragAndDropBox {
+    @include centerContent;
+    flex-direction: column;
+    background: rgba(195, 154, 131, 0.6);
+    border-radius: 5px;
+    margin: 2rem 10rem;
+    padding: 5rem 0;
+  }
+}
+
+.buttonContainer {
+  @include centerContent;
+  &__addCancel {
+    @include button;
+    color: $primary-blue;
+    background-color: transparent;
+    border: 1.5px solid $primary-blue;
+    margin: 1rem;
+  }
+  &__createButton {
+    @include button;
+    margin: 1rem;
+
+    &--customized {
+      color: $primary-blue;
+      background-color: white;
+      border: 1.5px solid $primary-blue;
+      font-size: 12px;
+    }
+  }
+}

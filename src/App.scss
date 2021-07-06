@@ -1,0 +1,111 @@
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+p {
+  color: #01394e;
+  font-size: 12px;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #01394e;
+  margin-top: 1rem;
+}
+
+// -----VARIABLES-----//
+
+$primary-orange: #ff6223;
+$primary-beige: #c39a83;
+$primary-blue: #01394e;
+$hide: none;
+
+// -----MIXIN-----//
+
+@mixin fieldStyle-large {
+  width: 35vw;
+  height: 5vh;
+  border-radius: 5px;
+  padding-left: 2vw;
+  border: 1px solid #c39a83;
+}
+
+@mixin fieldStyle-small {
+  width: 17vw !important;
+  height: 5vh !important;
+  border: 1px solid #c39183;
+  border-radius: 5px;
+  padding-left: 2vh;
+}
+
+@mixin centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin contentBox {
+  width: 100%;
+  min-height: 100px;
+  border: 2px solid $primary-beige;
+  border-radius: 5px;
+}
+
+@mixin pagePadding {
+  padding: 0 15vw 0 15vw;
+  // padding-left: 20vw;
+  // padding-right: 20vw;
+}
+
+@mixin h1 {
+  color: #01394e;
+  font-size: 18px;
+}
+
+@mixin button {
+  width: 10vw;
+  height: 5vh;
+  border-radius: 5px;
+  background-color: #ff6223;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@mixin newSession-p {
+  color: $primary-orange;
+  margin: 0;
+}
+
+@mixin zignsecSymbol {
+  width: auto;
+  height: 5vh;
+}
+
+@mixin zignsecLogo {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@mixin sessionStatusButton {
+  font-weight: bold;
+
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem 2.5rem;
+}
+@mixin sessionStatusCircles {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}

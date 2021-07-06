@@ -1,0 +1,126 @@
+@import "../../App.scss";
+
+.collapsedContainer {
+  padding: 0 1rem;
+  // border: 1.5px solid $primary-beige;
+  border-radius: 5px;
+  margin: 1rem 0;
+
+  &__nameRow {
+    @include centerContent;
+    justify-content: space-between;
+  }
+
+  &__leftDiv {
+    &--name {
+      font-weight: bold;
+      justify-content: flex-start;
+    }
+  }
+
+  &__rightDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &--relayState,
+    &--timeDate,
+    &--id {
+      padding: 0 3rem;
+    }
+    &--id:nth-last-child(1) {
+      padding: 0 !important;
+    }
+  }
+}
+//BUTTON
+.status {
+  @include centerContent;
+  justify-content: flex-start;
+  &__button {
+    margin-right: 2rem;
+
+    &--DECLINED {
+      @include sessionStatusButton;
+      background-color: red;
+      background: linear-gradient(
+        180deg,
+        #eb5757 47.83%,
+        rgba(255, 255, 255, 0) 195.65%
+      );
+    }
+    &--CREATED {
+      @include sessionStatusButton;
+      background-color: blue;
+      background: linear-gradient(
+        180deg,
+        #01394e 47.83%,
+        rgba(255, 255, 255, 0) 195.65%
+      );
+    }
+    &--OPERATOR_REQUIRED {
+      @include sessionStatusButton;
+      background-color: yellow;
+      background: linear-gradient(
+        180deg,
+        #f2c94c 47.83%,
+        rgba(255, 255, 255, 0) 195.65%
+      );
+    }
+    &--ACCEPTED {
+      @include sessionStatusButton;
+      background-color: green;
+      background: linear-gradient(
+        183.68deg,
+        #219653 56.1%,
+        rgba(33, 150, 83, 0) 186.85%
+      );
+    }
+  }
+
+  &__circle {
+    &--DECLINED {
+      @include centerContent;
+      @include sessionStatusCircles;
+      background: linear-gradient(
+        180deg,
+        #eb5757 47.83%,
+        rgba(255, 255, 255, 0) 195.65%
+      );
+    }
+    &--CREATED {
+      @include centerContent;
+      @include sessionStatusCircles;
+      background: linear-gradient(
+        180deg,
+        #01394e 47.83%,
+        rgba(255, 255, 255, 0) 195.65%
+      );
+    }
+    &--OPERATOR_REQUIRED {
+      @include centerContent;
+      @include sessionStatusCircles;
+      background: linear-gradient(
+        180deg,
+        #f2c94c 47.83%,
+        rgba(255, 255, 255, 0) 195.65%
+      );
+    }
+    &--ACCEPTED {
+      @include centerContent;
+      @include sessionStatusCircles;
+      background: linear-gradient(
+        183.68deg,
+        #219653 56.1%,
+        rgba(33, 150, 83, 0) 186.85%
+      );
+    }
+    &--text {
+      padding-left: 1rem;
+    }
+  }
+
+  &__iconsBar {
+    @include centerContent;
+    padding-right: 1rem;
+  }
+}

@@ -1,0 +1,82 @@
+@import "../App.scss";
+
+.progressbar-container{
+    @include centerContent;
+    padding: 5vh 0 5vh 0;
+}
+
+.newScanning-container{
+    @include centerContent;
+    flex-direction: column;
+
+    &__p{
+        @include newSession-p;
+    }
+
+    &__ZS-symbol{
+        @include zignsecSymbol;
+
+        &__logo{
+            @include zignsecLogo;
+        }
+    }
+}
+
+.addDocument-container{
+    @include centerContent;
+    flex-direction: column;
+
+    &__p{
+        @include newSession-p;
+    }
+
+    &__ZS-symbol{
+        @include zignsecSymbol;
+
+        &__logo{
+            @include zignsecLogo;
+        }
+    }
+}
+
+.documentUploaded-container{
+    @include centerContent;
+    flex-direction: column;
+
+    &__p{
+        @include newSession-p;
+    }
+
+    &__ZS-symbol{
+        @include zignsecSymbol;
+
+        &__logo{
+            @include zignsecLogo;
+        }
+    }
+}
+
+.line{
+    width: 5%;
+    text-align: center; 
+    border-bottom: 1px solid $primary-orange; 
+    line-height: 0.1em;
+    // margin: 10px 0 20px; 
+    margin: 0 1vw 0 1vw;
+}
+
+.newScanning-container-inactive{
+    @include centerContent;
+    flex-direction: column;
+    opacity: 20%;
+}
+
+.addDocument-container-inactive{
+    @include centerContent;
+    flex-direction: column;
+    opacity: 20%;}
+
+.documentUploaded-container-inactive{
+    @include centerContent;
+    flex-direction: column;
+    opacity: 20%;}
